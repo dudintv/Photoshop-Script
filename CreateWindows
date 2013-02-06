@@ -1,0 +1,24 @@
+//создание модального Диалога
+var win = new Window("dialog{text:'Progress',bounds:[100,100,400,150],\ 
+bar:Progressbar{bounds:[20,20,280,31] , value:0,maxvalue:100}};");
+win.show();
+
+for(...){
+    //do work here
+    //update progress
+    win.bar.value = ...;
+}
+win.close();
+
+//создание НЕ модального окна
+var win = new Window("window{text:'Progress',bounds:
+[100,100,400,150],bar:Progressbar{bounds:[20,20,280,31] , 
+value:0,maxvalue:100}};");
+win.show();
+
+for(...){
+    //do work here
+    //update progress
+    win.bar.value = ...;
+}
+win.close();
