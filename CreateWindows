@@ -52,3 +52,8 @@ win.Process.onClick = function() {
  selectedFile.execute();
 }
 win.show();
+
+//впрочем текстовый файл можно открыть проще:
+var selectedFile = File.openDialog("Please select TEXT file.","TEXT File:*.txt");
+
+
