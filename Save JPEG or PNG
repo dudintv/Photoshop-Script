@@ -21,3 +21,13 @@ var docName = doc.name.replace(/\.[^\.]+$/, '');
 var jpegName = decodeURI(doc.path) + "/" + docName + ".jpg";
 var saveName = new File(jpegName);
 doc.saveAs(saveName, saveOptions, true, Extension.LOWERCASE);
+
+
+
+//получение имени файла в развернутом виде
+//[0] - это полное имя файла; [1] - это имя файла; [2] - это расширение файла
+function GetFileName(objDoc)
+{
+    var fname = objDoc.name.match(/(.*)(\.[^\.]+)/) ? docName = docName.match(/(.*)(\.[^\.]+)/):docName = [docName, docName];
+    return fname; 
+}
